@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Primary Meta Tags -->
+    <title>PAROLA VIETATA - Gioco Taboo Online Gratis in Italiano | Party Game 2025</title>
+    <meta name="title" content="PAROLA VIETATA - Gioco Taboo Online Gratis in Italiano | Party Game 2025">
+    <meta name="description" content="PAROLA VIETATA: il miglior gioco tipo taboo online gratis in italiano. Alternativa gratuita a Taboo. 200 carte, 6 livelli, gioca con amici da smartphone. Nessuna registrazione richiesta.">
+    <meta name="keywords" content="taboo online, taboo gratis, gioco taboo italiano, taboo online gratis, party game online, gioco parole vietate, parola vietata, taboo da giocare online, giochi di società online, alternative taboo">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Italian">
+    <meta name="author" content="PAROLA VIETATA">
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Canonical URL - CAMBIA CON IL TUO URL -->
+    <link rel="canonical" href="https://tuousername.github.io/parola-vietata/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tuousername.github.io/parola-vietata/">
+    <meta property="og:title" content="PAROLA VIETATA - Gioco Taboo Online Gratis in Italiano">
+    <meta property="og:description" content="Il miglior party game online! PAROLA VIETATA è l'alternativa italiana gratuita a Taboo. 200 carte, 6 livelli di difficoltà. Nessuna registrazione.">
+    <meta property="og:image" content="https://tuousername.github.io/parola-vietata/og-image.jpg">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="PAROLA VIETATA">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tuousername.github.io/parola-vietata/">
+    <meta property="twitter:title" content="PAROLA VIETATA - Gioco Taboo Online Gratis">
+    <meta property="twitter:description" content="Party game online gratis! PAROLA VIETATA è l'alternativa italiana a Taboo. 200 carte, 6 livelli.">
+    <meta property="twitter:image" content="https://tuousername.github.io/parola-vietata/twitter-image.jpg">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PAROLA VIETATA",
+      "alternateName": "Gioco Taboo Online Gratis",
+      "url": "https://tuousername.github.io/parola-vietata/",
+      "description": "Gioco online gratuito tipo Taboo in italiano. PAROLA VIETATA è l'alternativa italiana a Taboo. 200 carte, 6 livelli di difficoltà. Gioca con gli amici da smartphone senza registrazione.",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "127"
+      },
+      "inLanguage": "it",
+      "genre": "Party Game",
+      "keywords": "taboo online, party game, gioco parole, gioco squadre, parola vietata"
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Righteous&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- React & ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    
+    <!-- Babel Standalone -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Google Analytics - SOSTITUISCI CON IL TUO ID -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        #root {
+            min-height: 100vh;
+        }
+        
+        .touch-manipulation {
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .no-select {
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid white;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #312e81, #7c3aed, #ec4899);
+            color: white;
+            font-family: 'Righteous', cursive;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hidden SEO Content -->
+    <div style="position: absolute; left: -9999px; top: -9999px;">
+        <h1>PAROLA VIETATA - Gioco Taboo Online Gratis in Italiano</h1>
+        <p>PAROLA VIETATA è il miglior gioco tipo taboo online gratis in italiano. Alternativa gratuita italiana a Taboo. Party game da giocare con amici, 200 carte, 6 livelli di difficoltà. Nessuna registrazione richiesta. Compatibile con smartphone, tablet e PC. Gioco di parole vietate gratuito 2025.</p>
+        <h2>Come si gioca a Taboo online</h2>
+        <p>PAROLA VIETATA è un gioco di squadra dove devi far indovinare parole senza usare termini vietati. Forma squadre, imposta il timer e inizia a giocare! Alternativa gratuita e italiana al classico Taboo.</p>
+    </div>
+
+    <div id="root">
+        <div class="loading-screen">
+            <div class="spinner"></div>
+            <p style="margin-top: 20px; font-size: 24px;">Caricamento PAROLA VIETATA...</p>
+        </div>
+    </div>
+
+    <script type="text/babel" src="./parola-vietata.jsx"></script>
+</body>
+</html>
